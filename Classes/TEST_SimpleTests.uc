@@ -9,7 +9,7 @@
 
     This program is free software; you can redistribute and/or modify
     it under the terms of the Lesser Open Unreal Mod License.
-	<!-- $Id -->
+	<!-- $Id: TEST_SimpleTests.uc,v 1.2 2005/06/07 07:58:59 elmuerte Exp $ -->
 *******************************************************************************/
 
 class TEST_SimpleTests extends TestCase;
