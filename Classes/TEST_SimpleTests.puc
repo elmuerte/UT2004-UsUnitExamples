@@ -1,0 +1,38 @@
+#ucpp notice - compile this unit with UCPP
+#ucpp version
+#ucpp include ../../UsUnit/macros.inc
+
+/*******************************************************************************
+	TEST_SimpleTests
+	Example test case, performs some simple tests like basic math testing.
+
+	Written by: Michiel "El Muerte" Hendriks <elmuerte@drunksnipers.com>
+
+	UsUnit Testing Framework
+	Copyright (C) 2005, Michiel "El Muerte" Hendriks
+
+	This program is free software; you can redistribute and/or modify
+	it under the terms of the Lesser Open Unreal Mod License.
+	<!-- $Id: TEST_SimpleTests.puc,v 1.1 2005/06/21 20:17:11 elmuerte Exp $ -->
+*******************************************************************************/
+
+class TEST_SimpleTests extends TestCase;
+
+function run()
+{
+	local array<string> dummy;
+	CHECK(1+1 == 2);
+	CHECK("CaseInsensitive" ~= "caseinsensitive");
+	CHECK(false, "false; will always fail");
+	CHECK(split("one two three four five", " ", dummy) == 5, "\"one two three four five\" has 5 words");
+	CHECK(split("one", " ", dummy) == 1, "\"one\" has 1 word");
+	CHECK(round(1.5) == 2);
+	CHECK(int(1.5) == 1);
+	done();
+}
+
+defaultproperties
+{
+	TestName="Simple Tests"
+	TestDescription="Example test case, performs some simple tests basic math testing."
+}
