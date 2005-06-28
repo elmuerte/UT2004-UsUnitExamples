@@ -1,25 +1,25 @@
 /*******************************************************************************
-    SUITE_ExampleSuite
-    Example test suite; bundles all example tests
+	SUITE_ExampleSuite
+	Example test suite; bundles all example tests
 
-    Written by: Michiel "El Muerte" Hendriks <elmuerte@drunksnipers.com>
+	Written by: Michiel "El Muerte" Hendriks <elmuerte@drunksnipers.com>
 
-    UsUnit Testing Framework
-    Copyright (C) 2005, Michiel "El Muerte" Hendriks
+	UsUnit Testing Framework
+	Copyright (C) 2005, Michiel "El Muerte" Hendriks
 
-    This program is free software; you can redistribute and/or modify
-    it under the terms of the Lesser Open Unreal Mod License.
-    <!-- $Id: SUITE_ExampleSuite.uc,v 1.2 2005/06/24 16:29:05 elmuerte Exp $ -->
+	This program is free software; you can redistribute and/or modify
+	it under the terms of the Lesser Open Unreal Mod License.
+	<!-- $Id: SUITE_ExampleSuite.uc,v 1.3 2005/06/28 09:45:05 elmuerte Exp $ -->
 *******************************************************************************/
 
 class SUITE_ExampleSuite extends TestSuite;
 
 defaultproperties
 {
-    TestName="Example Test Suite"
-    TestDescription="Bundles all example tests from the UsUnitExamples package"
-    bBreakOnFail=false
+	TestName="Example Test Suite"
+	TestDescription="Bundles all example tests from the UsUnitExamples package"
+	bBreakOnFail=false
 
-    TestClasses[0]=class'TEST_SimpleTests'
-    TestClasses[1]=class'TEST_SimpleTests'
+	TestClasses[0]=class'TEST_SimpleTests'
+	TestClasses[1]=class'TEST_TimedTest'
 }

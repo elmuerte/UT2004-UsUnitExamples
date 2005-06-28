@@ -1,0 +1,41 @@
+#ucpp notice - precompile this unit with UCPP
+#ucpp version
+#ucpp include ../../UsUnit/macros.inc
+
+/*******************************************************************************
+	TEST_TimedTest
+	This test does some timing tests.
+
+	Written by: Michiel "El Muerte" Hendriks <elmuerte@drunksnipers.com>
+
+	UsUnit Testing Framework
+	Copyright (C) 2005, Michiel "El Muerte" Hendriks
+
+	This program is free software; you can redistribute and/or modify
+	it under the terms of the Lesser Open Unreal Mod License.
+	<!-- $Id: TEST_TimedTest.puc,v 1.1 2005/06/28 09:45:05 elmuerte Exp $ -->
+*******************************************************************************/
+
+class TEST_TimedTest extends TestCase;
+
+var float LastTime;
+
+function run()
+{
+    LastTime = Level.TimeSeconds;
+	SetTimer(10, false);
+}
+
+event Timer()
+{
+    CHECK(Level.TimeSeconds - LastTime >= 10, "Time passed should be at least 10 seconds");
+    done();
+}
+
+function byte getProgress() { return Checks/2*100; }
+
+defaultproperties
+{
+	TestName="Timed Tests"
+	TestDescription="This test does some timing tests."
+}
