@@ -13,7 +13,7 @@
 
     This program is free software; you can redistribute and/or modify
     it under the terms of the Lesser Open Unreal Mod License.
-    <!-- $Id: TEST_TimedTest.uc,v 1.5 2005/09/09 20:41:31 elmuerte Exp $ -->
+    <!-- $Id: TEST_TimedTest.uc,v 1.6 2005/09/22 13:59:29 elmuerte Exp $ -->
 *******************************************************************************/
 
 class TEST_TimedTest extends TestCase;
